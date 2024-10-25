@@ -1,7 +1,7 @@
 {
   "name": "car-library",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -11,7 +11,6 @@
     "dist/style.css"
   ],
   "scripts": {
-    "start": "vite",
     "dev": "storybook dev -p 6006",
     "build": "vite build && tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -20,11 +19,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@radix-ui/react-slider": "^1.1.2",
     "clsx": "^2.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^6.1.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@it-incubator/eslint-config": "^1.0.1",

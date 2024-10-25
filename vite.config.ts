@@ -9,7 +9,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       fileName: 'index',
-      formats: ['es'],
+      formats: ['es', 'cjs'],
       name: 'car-library',
     },
     rollupOptions: {
@@ -18,6 +18,11 @@ export default defineConfig({
         ...Object.keys(dependencies),
         ...Object.keys(devDependencies),
       ],
+      output: {
+        dir: 'dist',
+        entryFileNames: '[name].js',
+        format: 'es',
+      },
     },
     sourcemap: true,
     target: 'esnext',
